@@ -1,0 +1,8 @@
+Flask==2.0.1
+py2neo==2021.1.5
+pdfplumber
+markdown
+spacy
+numpy
+python-Levenshtein
+fuzzywuzzy

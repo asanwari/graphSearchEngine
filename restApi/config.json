@@ -1,0 +1,8 @@
+{
+    "neo4j_username" : "neo4j",
+    "neo4j_password" : "test",
+    "bolt_url" : "bolt://172.19.0.3:7687" ,
+    "extracted_json_path" : "/home/graphSearchEngine/dataset/dataset/products.json",
+    "data_dir": "/home/graphSearchEngine/dataset/dataset/",
+    "fuzzy_match_threshold": 80    
+}

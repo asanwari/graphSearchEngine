@@ -1,0 +1,24 @@
+version: '3'
+services:
+  neo4j:
+    image: neo4j:latest
+    hostname: neo4j
+    container_name: testneo4j
+    networks: 
+      - network
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - ~/graphSearchEngine/database/neo4j/plugins:/plugins
+      - ~/graphSearchEngine/database/neo4j/data:/data
+      - ~/graphSearchEngine/database/neo4j/logs:/logs
+      - ~/graphSearchEngine/database/neo4j/import:/var/lib/neo4j/import
+    environment:
+      NEO4J_AUTH: neo4j/test
+      NEO4J_dbms_logs_debug_level: DEBUG
+      NEO4J_dbms_connector_bolt_address: 0.0.0.0:7687
+networks: 
+  network: 
+    external: 
+      name: my-bridge-network 

@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  graph-search:
+    build: .
+    networks: 
+      - network
+    ports:
+      - 5000:80
+    volumes:
+      - '~/graphSearchEngine/restApi:/home/graphSearchEngine/restApi'
+      - '~/graphSearchEngine/dataset:/home/graphSearchEngine/dataset'
+networks: 
+  network: 
+    external: 
+      name: my-bridge-network 
